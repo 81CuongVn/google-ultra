@@ -114,3 +114,13 @@ python3 ultra0.py accounts.txt --no-switch
 脚本只在本地跑，账号密码和卡号不联网，也不上传任何地方。报告文件在 `ultra0-report/`，里面有 offer 明细和每步结果。
 
 这段代码只对 Play 结算流程里「客户端能拿到试用 offer」这件事做了利用，没有改任何服务端数据。
+
+## 交流
+
+有问题进群问。进不来的话加我微信，备注「Ultra」，我拉你进去。
+
+<img src="assets/wechat-group.jpg" width="320" alt="交流群二维码">
+
+<br>
+
+<img src="assets/wechat-admin.jpg" width="320" alt="微信二维码">
