@@ -117,10 +117,12 @@ python3 ultra0.py accounts.txt --no-switch
 
 ## 交流
 
-有问题进群问。进不来的话加我微信，备注「Ultra」，我拉你进去。
+有问题进群问。三个群随便进一个，都满了就加我微信，备注「Ultra」，我拉你。
 
-<img src="assets/wechat-group.jpg" width="320" alt="交流群二维码">
-
-<br>
-
-<img src="assets/wechat-admin.jpg" width="320" alt="微信二维码">
+<table>
+<tr>
+<td align="center"><b>2 群</b><br><img src="assets/wechat-group.jpg" width="300" alt="2 群二维码"></td>
+<td align="center"><b>3 群</b><br><img src="assets/wechat-group3.jpg" width="300" alt="3 群二维码"></td>
+<td align="center"><b>都满了加我</b><br><img src="assets/wechat-admin.jpg" width="300" alt="微信二维码"></td>
+</tr>
+</table>
