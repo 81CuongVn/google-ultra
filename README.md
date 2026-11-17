@@ -126,3 +126,12 @@ python3 ultra0.py accounts.txt --no-switch
 <td align="center"><b>都满了加我</b><br><img src="assets/wechat-admin.jpg" width="300" alt="微信二维码"></td>
 </tr>
 </table>
+
+## 友链
+
+本项目在 [LINUX DO](https://linux.do) 社区发布与讨论，感谢社区的支持。
+
+- [LINUX DO](https://linux.do) —— 新的理想主义者社区
+- [LINUX DO 开源推广](https://linux.do/tag/1014) —— 开源项目推广板块
+
+[![LINUX DO](https://img.shields.io/badge/LINUX%20DO-%E7%A4%BE%E5%8C%BA-1f6feb)](https://linux.do)
