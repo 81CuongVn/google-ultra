@@ -4,6 +4,14 @@ Google One 的 AI Ultra 有个 12 个月免费试用的 offer，任何页面上�
 
 原理是借 Google One 自己的进程调 BillingClient，不需要 Xposed，不需要改 APK。
 
+## 两个版本
+
+**简单版**：一个网页，双击 `web/index.html` 打开，登录 → 绑卡 → 点一下，完事。不用装 Python，不用 root，不用数据线。
+
+**脚本版**：`ultra0.py`，要一台 root 手机和 frida。优点是 offer 从真实客户端取，不依赖浏览器指纹，能批量跑。
+
+先试简单版，不行再上脚本。
+
 ## 能拿到什么
 
 拿到的是 **Ultra 5x，20TB，12 个月 $0**，到期前取消就不用付钱。开通后 Play 订阅页会写「即将扣款 2027-11-17 US$99.99/月」，这是试用结束后的价格，不是现在扣。
@@ -25,6 +33,20 @@ adb 用 Android SDK 里的 platform-tools。装好后 `adb devices` 能看到手
 手机上要开「开发者选项 → USB 调试」，插上后在弹窗里点允许。
 
 ## 用法
+
+### 简单版怎么用
+
+下下来，双击 `web/index.html`，浏览器会打开一个页面：
+
+1. 点「去登录」，用要开的谷歌账号登进去
+2. 点「去绑卡」，绑一张卡，卡里留 1 美元就行，试用期间不扣
+3. 回页面，点「Ultra 20 TB」那张卡片
+
+跳到 Google 的结算页之后，确认金额是 0，点订阅即可。
+
+不想下仓库的话，也可以直接访问在线版：https://gylive.github.io/google-ultra/web/
+
+### 脚本版怎么用
 
 先自检一遍环境，它会检查设备、root、frida-server、推送计费模块，还会顺手关掉会拦截 Play 网络的代理和 Clash：
 
@@ -117,13 +139,16 @@ python3 ultra0.py accounts.txt --no-switch
 
 ## 交流
 
-有问题进群问。三个群随便进一个，都满了就加我微信，备注「Ultra」，我拉你。
+有问题进群问。四个群随便进一个，都满了就加我微信，备注「Ultra」，我拉你。
 
 <table>
 <tr>
-<td align="center"><b>2 群</b><br><img src="assets/wechat-group.jpg" width="300" alt="2 群二维码"></td>
-<td align="center"><b>3 群</b><br><img src="assets/wechat-group3.jpg" width="300" alt="3 群二维码"></td>
-<td align="center"><b>都满了加我</b><br><img src="assets/wechat-admin.jpg" width="300" alt="微信二维码"></td>
+<td align="center"><b>2 群</b><br><img src="assets/wechat-group.jpg" width="280" alt="2 群二维码"></td>
+<td align="center"><b>3 群</b><br><img src="assets/wechat-group3.jpg" width="280" alt="3 群二维码"></td>
+</tr>
+<tr>
+<td align="center"><b>4 群</b><br><img src="assets/wechat-group4.jpg" width="280" alt="4 群二维码"></td>
+<td align="center"><b>都满了加我</b><br><img src="assets/wechat-admin.jpg" width="280" alt="微信二维码"></td>
 </tr>
 </table>
 
