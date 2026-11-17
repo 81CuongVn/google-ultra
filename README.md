@@ -36,7 +36,7 @@ adb 用 Android SDK 里的 platform-tools。装好后 `adb devices` 能看到手
 
 ### 简单版怎么用
 
-下下来，双击 `web/index.html`，浏览器会打开一个页面：
+源码在 `web/index.html`，单文件，下载后双击就能用，浏览器会打开一个页面：
 
 1. 点「去登录」，用要开的谷歌账号登进去
 2. 点「去绑卡」，绑一张卡，卡里留 1 美元就行，试用期间不扣
@@ -139,16 +139,18 @@ python3 ultra0.py accounts.txt --no-switch
 
 ## 交流
 
-有问题进群问。四个群随便进一个，都满了就加我微信，备注「Ultra」，我拉你。
+有问题进群问。五个群随便进一个，都满了就加我微信，备注「Ultra」，我拉你。
 
 <table>
 <tr>
-<td align="center"><b>2 群</b><br><img src="assets/wechat-group.jpg" width="280" alt="2 群二维码"></td>
-<td align="center"><b>3 群</b><br><img src="assets/wechat-group3.jpg" width="280" alt="3 群二维码"></td>
+<td align="center"><b>2 群</b><br><img src="assets/wechat-group.jpg" width="240" alt="2 群"></td>
+<td align="center"><b>3 群</b><br><img src="assets/wechat-group3.jpg" width="240" alt="3 群"></td>
+<td align="center"><b>4 群</b><br><img src="assets/wechat-group4.jpg" width="240" alt="4 群"></td>
 </tr>
 <tr>
-<td align="center"><b>4 群</b><br><img src="assets/wechat-group4.jpg" width="280" alt="4 群二维码"></td>
-<td align="center"><b>都满了加我</b><br><img src="assets/wechat-admin.jpg" width="280" alt="微信二维码"></td>
+<td align="center"><b>5 群</b><br><img src="assets/wechat-group5.jpg" width="240" alt="5 群"></td>
+<td align="center"><b>都满了加我</b><br><img src="assets/wechat-admin.jpg" width="240" alt="微信"></td>
+<td align="center"></td>
 </tr>
 </table>
 
@@ -160,6 +162,18 @@ python3 ultra0.py accounts.txt --no-switch
 - [LINUX DO 开源推广](https://linux.do/tag/1014) —— 开源项目推广板块
 
 [![LINUX DO](https://img.shields.io/badge/LINUX%20DO-%E7%A4%BE%E5%8C%BA-1f6feb)](https://linux.do)
+
+## 仓库结构
+
+```
+web/index.html      简单版：单文件网页，在线版就是它
+simple/ultra.py     脚本版极简实现（带内嵌模块）
+simple/README.md    脚本版教程
+ultra0.py           脚本版完整实现（批量、选档、切号）
+assets/             群二维码
+```
+
+在线版地址：https://gylive.github.io/google-ultra/web/
 
 ## 许可
 
