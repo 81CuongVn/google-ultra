@@ -135,3 +135,7 @@ python3 ultra0.py accounts.txt --no-switch
 - [LINUX DO 开源推广](https://linux.do/tag/1014) —— 开源项目推广板块
 
 [![LINUX DO](https://img.shields.io/badge/LINUX%20DO-%E7%A4%BE%E5%8C%BA-1f6feb)](https://linux.do)
+
+## 许可
+
+MIT，见 [LICENSE](LICENSE)。
