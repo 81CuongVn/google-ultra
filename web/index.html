@@ -63,6 +63,15 @@
     </div>
   </div>
 
+  <div id="tip" style="display:none;background:#1b2230;border:1px solid #2a3648;border-radius:12px;padding:16px 18px;margin-bottom:16px">
+    <div style="color:#c3c9d6;margin-bottom:10px">新标签页如果出现 <b style="color:#ff8a8a">400</b>，说明这个号的资格跟链接对不上，或者浏览器指纹不匹配。两个办法：</div>
+    <div style="color:#8a93a6;font-size:13px;line-height:1.9">
+      1. 换个浏览器再点一次，或者把链接复制出来，粘到已经登录的浏览器里打开<br>
+      2. 用脚本版：<a href="https://github.com/gylive/google-ultra" target="_blank">github.com/gylive/google-ultra</a>
+    </div>
+    <button id="copy" class="btn" style="margin-top:12px">复制链接</button>
+  </div>
+
   <div class="note">
     <b>开完记得取消自动续费</b>，不然到期会按上面那个价格扣。路径：Play 商店 → 头像 → 付款和订阅 → 订阅。
     取消之后已经用掉的时间不受影响。<br><br>
@@ -104,16 +113,35 @@ function buildUrl(key) {
   for (let i = 14; i <= 20; i++) ear[i] = null;
   ear[21] = 1;
   for (let i = 22; i <= 24; i++) ear[i] = null;
+  const gapi = "&usegapi=1&id=I0_" + Date.now()
+    + "&_gfid=I0_" + Date.now()
+    + "&parent=https%3A%2F%2Fone.google.com&pfname=&rpctoken="
+    + (1000000 + Math.floor(Math.random() * 8000000))
+    + "&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.zh_CN.O%2Fd%3D1%2Frs%3DAHpOoo%2Fm%3D__features__";
   return "https://tokenized.play.google.com/eacquire/multiline?authuser=0&ear="
-    + encodeURIComponent(JSON.stringify(ear)) + "&usegapi=1";
+    + encodeURIComponent(JSON.stringify(ear)) + gapi;
+}
+
+let lastUrl = "";
+
+function openPlan(key) {
+  lastUrl = buildUrl(key);
+  const w = window.open(lastUrl, "_blank");
+  document.getElementById("tip").style.display = "block";
+  if (!w) window.location.href = lastUrl;
 }
 
 document.querySelectorAll(".plan").forEach(el => {
-  el.addEventListener("click", () => {
-    const key = el.dataset.key;
-    const url = buildUrl(key);
-    window.location.href = url;
-  });
+  el.addEventListener("click", () => openPlan(el.dataset.key));
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target && e.target.id === "copy") {
+    navigator.clipboard.writeText(lastUrl).then(() => {
+      document.getElementById("copy").textContent = "已复制";
+      setTimeout(() => { document.getElementById("copy").textContent = "复制链接"; }, 1500);
+    });
+  }
 });
 </script>
 </body>
